@@ -13,5 +13,15 @@ describe('*** Auth reducer ***', () => {
         isLoggedin: true,
       });
     });
+    it('-> should set null in state', () => {
+      const initialAuthState = AuthReducer.AUTH_INTIAL_STATE;
+      const user = null;
+      const action = AuthActions.fetchCurrentUserSuccessAction({ user });
+      expect(AuthReducer.authReducer(initialAuthState, action)).toEqual({
+        ...initialAuthState,
+        user,
+        isLoggedin: false,
+      });
+    });
   });
 });
