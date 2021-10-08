@@ -17,6 +17,7 @@ import {
 } from '@angular/platform-browser-dynamic/testing';
 
 import './app/shared/store/auth.actions.spec.ts';
+import './app/shared/store/auth.reducer.spec.ts';
 
 declare global {
   interface Window {
